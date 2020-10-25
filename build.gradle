@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'org.kstrek'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    def vertxVersion = '4.0.0.Beta3'
+
+    implementation "io.vertx:vertx-web:$vertxVersion"
+    implementation "com.fasterxml.jackson.core:jackson-databind:2.11.3"
+
+    testImplementation "org.junit.jupiter:junit-jupiter:5.7.0"
+    testImplementation "org.mockito:mockito-core:3.5.13"
+    testImplementation "org.assertj:assertj-core:3.17.2"
+}
+
+application {
+    mainClassName = "org.kstrek.tweet.App"
+}
