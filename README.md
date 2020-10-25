@@ -50,7 +50,7 @@
     Creates a follower-followee relationship between users.
 
     Response codes:
-    * `200` - when post was created successfully
+    * `200` - when relationship was established successfully
     * `500` - in case of unexpected errors
     
     Exemplary curl:  
